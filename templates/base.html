@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Movie Picker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .card {
+      border: none;
+      border-radius: 15px;
+      padding: 2rem;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+      background-color: #ffffff;
+    }
+
+    .form-select, .btn {
+      height: 48px;
+      font-size: 1rem;
+      border-radius: 10px;
+    }
+
+    h2 {
+      font-weight: 600;
+      color: #0d6efd;
+    }
+
+    ul.list-group {
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    li.list-group-item {
+      padding: 0.75rem 1rem;
+      font-weight: 500;
+    }
+
+    a.btn-secondary {
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>

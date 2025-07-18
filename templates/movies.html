@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="card">
+    <h2 class="mb-3 text-center">🎥 {{ genre }} Movies</h2>
+    {% if movies %}
+      <ul class="list-group">
+        {% for movie in movies %}
+          <li class="list-group-item">{{ movie }}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="text-muted">No movies found for this genre.</p>
+    {% endif %}
+    <a href="{{ url_for('index') }}" class="btn btn-secondary w-100 mt-4">🔙 Pick Another Genre</a>
+  </div>
+{% endblock %}
